@@ -9,7 +9,10 @@
 FROM node:10.15.3
 
 WORKDIR /usr/src/app
-
+#RUN npm cache clean --force
+#RUN rm -rf node_modules
+#RUN rm package-lock.json
+#RUN rm package.json
 
 #Application dependencies
 
