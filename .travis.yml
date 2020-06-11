@@ -1,7 +1,7 @@
 ### Runs builds on the commits you push after you’ve added a .travis.yml file.##
 
-#language: node_js
-language: java
+language: node_js
+#language: java
 
 ### Configuring email notifications ###
 
