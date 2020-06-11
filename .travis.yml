@@ -8,24 +8,24 @@ language: node_js
 # Установить версию Node.js
 node_js:
   - '10.15.3'
-cache: npm
+cache: yarn
     
 #services:
   # Использовать командную строку Docker
 #  - docker
 
-#install:
+install:
 #  - npm ci
   # Установить зависимости для тестов
-  # - npm ci
+  - yarn install
 
 #before_script:
   # Запустить сервер и клиент для тестов
 #  - npm run dev &
 
-#script:
+script:
   # Запустить тесты
-  #  - npm test
+  - yarn test
 #  - npm run lint:fix
 
 
