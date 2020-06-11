@@ -1,7 +1,30 @@
 ### Runs builds on the commits you push after you’ve added a .travis.yml file.##
 
-#language: node_js
-lavguage: JavaScript
+language: node_js
+
+# Установить версию Node.js
+node_js:
+  - '10.15.3'
+
+services:
+  # Использовать командную строку Docker
+  - docker
+
+install:
+  # Установить зависимости для тестов
+  - npm ci
+
+before_script:
+  # Запустить сервер и клиент для тестов
+  - npm run dev &
+
+script:
+  # Запустить тесты
+  - npm run test
+
+
+
+#lavguage: JavaScript
 #language: java
 
 ### Configuring email notifications ###
