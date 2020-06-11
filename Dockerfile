@@ -31,6 +31,6 @@ EXPOSE 1337
 #Run command sails lift by default
 #sales lift included in app.js
 
-##CMD [ "node", "app.js" ]
-CMD [ "node", "sails.lift" ]
+CMD [ "node", "app.js" ]
+##CMD [ "node", "sails.lift" ]
 ##sails lift
