@@ -22,7 +22,7 @@ RUN npm install
 
 COPY . .
 
-
+RUN sails lift
 
 #Expose port 1337
 
