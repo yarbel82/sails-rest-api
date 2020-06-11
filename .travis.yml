@@ -1,4 +1,7 @@
 ### Runs builds on the commits you push after you’ve added a .travis.yml file.##
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install libxml2-dev
 
 language: node_js
 
