@@ -23,9 +23,9 @@ cache: npm
   # Запустить сервер и клиент для тестов
 #  - npm run dev &
 
-script:
+#script:
   # Запустить тесты
-  - npm test
+  #  - npm test
 #  - npm run lint:fix
 
 
