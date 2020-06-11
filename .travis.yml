@@ -14,8 +14,8 @@ cache: npm
   # Использовать командную строку Docker
 #  - docker
 
-install:
-  - npm ci
+#install:
+#  - npm ci
   # Установить зависимости для тестов
   # - npm ci
 
