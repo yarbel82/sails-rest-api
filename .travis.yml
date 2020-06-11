@@ -13,8 +13,8 @@ node_js:
   # Использовать командную строку Docker
 #  - docker
 
-install:
-  - npm ci
+    #install:
+        #  - npm ci
   # Установить зависимости для тестов
   # - npm ci
 
@@ -22,10 +22,10 @@ install:
   # Запустить сервер и клиент для тестов
 #  - npm run dev &
 
-#script:
+script:
   # Запустить тесты
 #  - npm run test
-#npm run lint:fix
+  - npm run lint:fix
 
 
 #lavguage: JavaScript
