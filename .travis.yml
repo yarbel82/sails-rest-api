@@ -6,21 +6,21 @@ language: node_js
 node_js:
   - '10.15.3'
 
-services:
+#services:
   # Использовать командную строку Docker
-  - docker
+#  - docker
 
-install:
+    #install:
   # Установить зависимости для тестов
-  - npm ci
+  #  - npm ci
 
-before_script:
+#before_script:
   # Запустить сервер и клиент для тестов
-  - npm run dev &
+#  - npm run dev &
 
-script:
+#script:
   # Запустить тесты
-  - npm run test
+#  - npm run test
 
 
 
