@@ -1,20 +1,21 @@
 ### Runs builds on the commits you push after you’ve added a .travis.yml file.##
-before_install:
-  - sudo apt-get update
-  - sudo apt-get -y install libxml2-dev
+#before_install:
+#  - sudo apt-get update
+#  - sudo apt-get -y install libxml2-dev
 
 language: node_js
 
 # Установить версию Node.js
 node_js:
   - '10.15.3'
-
+cache: npm
+    
 #services:
   # Использовать командную строку Docker
 #  - docker
 
-    #install:
-        #  - npm ci
+install:
+  - npm ci
   # Установить зависимости для тестов
   # - npm ci
 
@@ -24,8 +25,8 @@ node_js:
 
 script:
   # Запустить тесты
-#  - npm run test
-  - npm run lint:fix
+  - npm test
+#  - npm run lint:fix
 
 
 #lavguage: JavaScript
