@@ -1,0 +1,26 @@
+### Runs builds on the commits you push after you’ve added a .travis.yml file.##
+
+language: node_js
+
+
+### Configuring email notifications ###
+
+#notifications:
+#  email:
+#    recipients:
+#      - one@example.com
+#      - other@example.com
+#    on_success: never # default: change
+#    on_failure: always # default: always
+
+
+
+### Travis CI can deploy your static files to GitHub Pages after a successful build.###
+
+#deploy:
+#  provider: pages
+#  skip_cleanup: true
+#  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#  keep_history: true
+#  on:
+#    branch: master
