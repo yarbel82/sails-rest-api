@@ -1,46 +1,30 @@
 ### Runs builds on the commits you push after you’ve added a .travis.yml file.##
-#before_install:
-#  - sudo apt-get update
-#  - sudo apt-get -y install libxml2-dev
+
 
 language: node_js
 
-# Установить версию Node.js
+# Set version Node.js
 node_js:
   - '10.15.3'
-#cache: yarn
-    
-#services:
-  # Использовать командную строку Docker
-#  - docker
-
-#install:
-#  - npm ci
-  # Установить зависимости для тестов
-#  - yarn install
-
-#before_script:
-  # Запустить сервер и клиент для тестов
-#  - npm run dev &
-
-#script:
-  # Запустить тесты
-  #  - yarn test
-#  - npm run lint:fix
 
 
-#lavguage: JavaScript
-#language: java
+   
+services:
+  # Use Docker
+  - docker
 
-### Configuring email notifications ###
+before_install:
+        # Build docker image
+        - docker build -t sail-rest-api:V1 .
 
-#notifications:
-#  email:
-#    recipients:
-#      - one@example.com
-#      - other@example.com
-#    on_success: never # default: change
-#    on_failure: always # default: always
+
+
+deploy:
+  # Push docker image to registry 
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
 
 
 
