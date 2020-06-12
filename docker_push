@@ -1,3 +1,4 @@
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker tag sails-rest-api:test yarbel82/sails-rest-api:test
 docker push yarbel82/sails-rest-api:test
