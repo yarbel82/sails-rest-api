@@ -10,13 +10,11 @@ FROM node:10.15.3
 
 WORKDIR /usr/src/app
 #RUN npm cache clean --force
-RUN rm -rf node_modules
-#RUN rm package-lock.json
-#RUN rm package.json
+#RUN rm -rf node_modules
 
 #Application dependencies
 
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install
 #Docker image contain all application files
@@ -33,5 +31,3 @@ EXPOSE 1337
 #sales lift included in app.js
 
 CMD [ "node", "app.js" ]
-##CMD [ "node", "sails.lift" ]
-##sails lift
