@@ -15,7 +15,7 @@ services:
 
 before_install:
         # Build docker image
-        - docker build -t sail-rest-api:V1 .
+        - docker build -t sails-rest-api:v1 .
 
 
 
